@@ -1,0 +1,9 @@
+config:
+  defaultstatus: true
+  protect-wild: false
+  protect-riderless: true
+messages:
+  access-denied: '&cAccess denied!'
+  toggle: '&6Horse fall damage protection is &e%status%'
+  protect-wild: '&6Protection for wild horses is &e%status%'
+  protect-riderless: '&6Protection for tamed, riderless horses is &e%status%'
