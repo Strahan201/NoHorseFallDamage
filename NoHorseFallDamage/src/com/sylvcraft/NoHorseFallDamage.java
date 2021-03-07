@@ -1,13 +1,12 @@
 package com.sylvcraft;
 
-import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Map;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+import com.sylvcraft.commands.Horsefall;
 import com.sylvcraft.events.EntityDamage;
-
-import com.sylvcraft.commands.horsefall;
 
 public class NoHorseFallDamage extends JavaPlugin {
   @Override
@@ -17,7 +16,7 @@ public class NoHorseFallDamage extends JavaPlugin {
     PluginManager pm = getServer().getPluginManager();
     pm.registerEvents(new EntityDamage(this), this);
 
-    getCommand("horsefall").setExecutor(new horsefall(this));
+    getCommand("horsefall").setExecutor(new Horsefall(this));
   }
   
   public void msg(String msgCode, CommandSender sender) {

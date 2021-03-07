@@ -10,10 +10,10 @@ import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 import com.sylvcraft.NoHorseFallDamage;
 
-public class horsefall implements TabExecutor {
+public class Horsefall implements TabExecutor {
   NoHorseFallDamage plugin;
   
-  public horsefall(NoHorseFallDamage instance) {
+  public Horsefall(NoHorseFallDamage instance) {
     plugin = instance;
   }
   
@@ -111,11 +111,11 @@ public class horsefall implements TabExecutor {
     }
   }
 
-	void showHelp(CommandSender sender) {
-	  int displayed = 0;
-	  if (sender.hasPermission("horsefall.toggle")) { plugin.msg("help-toggle", sender); displayed++; }
-	  if (sender.hasPermission("horsefall.admin")) { plugin.msg("help-protectwild", sender); displayed++; }
-	  if (sender.hasPermission("horsefall.admin")) { plugin.msg("help-protectriderless", sender); displayed++; }
-	  if (displayed == 0) plugin.msg("access-denied", sender);
+    void showHelp(CommandSender sender) {
+      int displayed = 0;
+      if (sender.hasPermission("horsefall.toggle")) { plugin.msg("help-toggle", sender); displayed++; }
+      if (sender.hasPermission("horsefall.admin")) { plugin.msg("help-protectwild", sender); displayed++; }
+      if (sender.hasPermission("horsefall.admin")) { plugin.msg("help-protectriderless", sender); displayed++; }
+      if (displayed == 0) plugin.msg("access-denied", sender);
   }
 }
